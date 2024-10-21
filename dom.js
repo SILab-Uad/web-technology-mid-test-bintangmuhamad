@@ -1,3 +1,4 @@
+
 // Dont change anything in this file
 
 document.getElementById('generateBtn').addEventListener('click', () => {
@@ -8,18 +9,14 @@ document.getElementById('generateBtn').addEventListener('click', () => {
         includeNumbers: document.getElementById('includeNumbers').checked,
         includeSpecialChars: document.getElementById('includeSpecialChars').checked,
     };
-
-    try {
-        const password = generatePassword(length, options);
-        document.getElementById('passwordOutput').value = password; 
-    } catch (error) {
-        alert(error.message); // Show the error message in an alert
-    }
+    
+    const password = generatePassword(length, options);
+    document.getElementById('passwordOutput').textContent = password;
 });
 
 // Copy to Clipboard functionality
 document.getElementById('copyBtn').addEventListener('click', () => {
-    const passwordOutput = document.getElementById('passwordOutput').value;
+    const passwordOutput = document.getElementById('passwordOutput').textContent;
     if (passwordOutput) {
         navigator.clipboard.writeText(passwordOutput).then(() => {
             alert('Password copied to clipboard!');

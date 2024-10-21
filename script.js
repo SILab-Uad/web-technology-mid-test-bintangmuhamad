@@ -1,3 +1,4 @@
+// TODO: Implement the password generation logic based on user input
 const generatePassword = (length, options) => {
     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -23,4 +24,7 @@ const generatePassword = (length, options) => {
     return password;
 };
 
-module.exports = { generatePassword }; // Correctly exporting the function
+// Cek apakah module.exports tersedia (Node.js), jika ya, gunakan itu
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = { generatePassword };
+}
