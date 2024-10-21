@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0e7ff; /* Background color */
+    background-color: #8fa0d6; /* Background color */
 }
 
 .container {
@@ -24,4 +24,38 @@ h1 {
     color: #4a4a4a; /* Header color */
 }
 
+label{
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+input[type="number"]{
+    pad: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button{
+    background-color: rgb(119, 25, 151);
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover{
+    background-color: rgb(50, 144, 36);
+}
 /* Add more styles here as needed */
+label:hover{
+    color: rgb(24, 199, 199);
+    font-size: larger;
+}
