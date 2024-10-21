@@ -34,5 +34,5 @@ const generatePassword = (length, options) => {
         const randomIndex = Math.floor(Math.random() * charSet.length);
         password += charSet[randomIndex];
     }
-    return password;
+    return password;
 };
